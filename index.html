@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lojistik Taşımacılık</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      background: #fff;
+    }
+
+    /* HEADER */
+    .main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 82px;
+      z-index: 999;
+      backdrop-filter: blur(3px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+
+    .navbar {
+      height: 82px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .logo-icon {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: #111;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 15px;
+      margin: 0 13px;
+      transition: .3s;
+    }
+
+    .nav-link:hover {
+      color: #8a7b49 !important;
+    }
+
+    .flag {
+      width: 24px;
+      height: 16px;
+      object-fit: cover;
+      margin-left: 9px;
+      border-radius: 2px;
+    }
+
+    /* HERO VIDEO */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 720px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.28), rgba(0,0,0,.42)),
+        rgba(255,255,255,.08);
+      z-index: 2;
+    }
+
+    #particles-js {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      opacity: .65;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 4;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-top: 82px;
+      color: #fff;
+    }
+
+    .hero-box {
+      max-width: 760px;
+    }
+
+    .hero-subtitle {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid rgba(255,255,255,.55);
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(8px);
+      border-radius: 50px;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.08;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      text-shadow: 0 7px 25px rgba(0,0,0,.45);
+    }
+
+    .hero-title span {
+      color: #d7c27b;
+    }
+
+    .hero-desc {
+      font-size: 19px;
+      line-height: 1.7;
+      max-width: 650px;
+      color: rgba(255,255,255,.92);
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      background: #c6aa55;
+      color: #111;
+      padding: 15px 28px;
+      border-radius: 50px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .btn-gold:hover {
+      background: #fff;
+      color: #111;
+      transform: translateY(-3px);
+    }
+
+    .btn-outline-custom {
+      border: 1px solid rgba(255,255,255,.75);
+      color: #fff;
+      padding: 15px 28px;
+      border-radius: 50px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .btn-outline-custom:hover {
+      background: #fff;
+      color: #111;
+      transform: translateY(-3px);
+    }
+
+    .scroll-icon {
+      position: absolute;
+      z-index: 5;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 28px;
+      height: 46px;
+      border: 3px solid #fff;
+      border-radius: 40px;
+    }
+
+    .scroll-icon::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      width: 5px;
+      height: 9px;
+      background: #fff;
+      border-radius: 50px;
+      transform: translateX(-50%);
+      animation: scrollAnim 1.4s infinite;
+    }
+
+    .navbar-toggler {
+        color: #fff;
+    }
+    @keyframes scrollAnim {
+      0% { top: 8px; opacity: 1; }
+      100% { top: 24px; opacity: 0; }
+    }
+
+    @media(max-width: 991px) {
+      .main-header {
+        height: auto;
+      }
+
+      .navbar {
+        height: auto;
+        padding: 14px 0;
+      }
+
+    .navbar-collapse {
+        background: rgb(0 0 0 / 36%);
+        padding: 20px;
+        margin-top: 12px;
+        border-radius: 18px;
+    }
+
+      .hero-title {
+        font-size: 42px;
+      }
+
+      .hero-desc {
+        font-size: 16px;
+      }
+
+      .logo-text {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+    }
+
+    @media(max-width: 576px) {
+      .hero-section {
+        min-height: 650px;
+      }
+
+      .hero-title {
+        font-size: 34px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+    }
+/* COUNTER */
+
+.counter-section {
+  position: relative;
+  margin-top: -65px;
+  z-index: 10;
+  padding-bottom: 70px;
+}
+
+.counter-box {
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 28px 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  transition: .35s;
+  height: 100%;
+}
+
+.counter-box:hover {
+  transform: translateY(-5px);
+}
+
+.counter-icon {
+  width: 58px;
+  height: 58px;
+  margin: auto;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c9ac57, #8e7332);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-icon i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.counter-box h2 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.counter-box p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+@media(max-width:991px){
+
+  .counter-section{
+    margin-top: -30px;
+  }
+
+  .counter-box{
+    padding: 24px 14px;
+  }
+
+  .counter-box h2{
+    font-size: 28px;
+  }
+
+}
+  </style>
+</head>
+
+<body>
+
+<header class="main-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a href="#" class="logo-area">
+        <img style="width: 150px;" src="logo.png" class="logo-icon" alt="Lojistik Logo">
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+        <i class="fa-solid fa-bars fs-2"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="mainMenu">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Kurumsal</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Hizmetlerimiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Kariyer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
+          <li class="nav-item d-flex align-items-center ms-lg-2">
+            <img src="https://flagcdn.com/w40/tr.png" class="flag" alt="TR">
+            <img src="https://flagcdn.com/w40/gb.png" class="flag" alt="EN">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="banner.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+  <div id="particles-js"></div>
+
+  <div class="container hero-content">
+    <div class="hero-box">
+      <div class="hero-subtitle">ULUSAL VE ULUSLARARASI TAŞIMACILIK</div>
+      <h1 class="hero-title">
+        Güvenilir <span>Lojistik</span><br>
+        Çözümleri
+      </h1>
+      <p class="hero-desc">
+        Karayolu, denizyolu ve proje taşımacılığında profesyonel çözümler sunuyor;
+        yüklerinizi zamanında, güvenli ve planlı şekilde teslim ediyoruz.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="tel:+905000000000" class="btn-gold">
+          <i class="fa-solid fa-phone me-2"></i> Hemen Ara
+        </a>
+        <a href="#iletisim" class="btn-outline-custom">
+          <i class="fa-solid fa-paper-plane me-2"></i> Teklif Al
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-icon"></div>
+</section>
+<!-- COUNTER SECTION -->
+<section class="counter-section">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="counter-box">
+          <div class="counter-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+
+          <h2>
+            <span class="counter" data-count="1250">0</span>+
+          </h2>
+
+          <p>Mutlu Müşteri</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="counter-box">
+          <div class="counter-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+
+          <h2>
+            <span class="counter" data-count="5800">0</span>+
+          </h2>
+
+          <p>Tamamlanan Taşıma</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="counter-box">
+          <div class="counter-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <h2>
+            <span class="counter" data-count="81">0</span>
+          </h2>
+
+          <p>Hizmet Verilen Şehir</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="counter-box">
+          <div class="counter-icon">
+            <i class="fa-solid fa-box"></i>
+          </div>
+
+          <h2>
+            <span class="counter" data-count="24000">0</span>+
+          </h2>
+
+          <p>Taşınan Yük</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 90,
+        "density": {
+          "enable": true,
+          "value_area": 1000
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.55,
+        "random": true
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.35,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.4,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 170,
+          "line_linked": {
+            "opacity": 0.7
+          }
+        },
+        "push": {
+          "particles_nb": 4
+        }
+      }
+    },
+    "retina_detect": true
+  });
+
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 70) {
+      $(".main-header").css({
+        "background": "rgba(255,255,255,0.05)",
+        "box-shadow": "0 6px 25px rgba(0,0,0,.05)"
+      });
+    } else {
+      $(".main-header").css({
+        "background": "rgba(255,255,255,0.05)",
+        "box-shadow": "0 4px 20px rgba(0,0,0,.05)"
+      });
+    }
+  });
+</script>
+<script>
+
+let counted = false;
+
+$(window).scroll(function () {
+
+  let oTop = $('.counter-section').offset().top - window.innerHeight;
+
+  if (!counted && $(window).scrollTop() > oTop) {
+
+    $('.counter').each(function () {
+
+      let $this = $(this),
+          countTo = $this.attr('data-count');
+
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+          duration: 2500,
+          easing: 'swing',
+
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+
+          complete: function () {
+            $this.text(this.countNum);
+          }
+
+        });
+
+    });
+
+    counted = true;
+  }
+
+});
+
+</script>
+</body>
+</html>
