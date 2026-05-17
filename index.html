@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +31,7 @@
       height: 82px;
       z-index: 999;
       backdrop-filter: blur(3px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
     }
 
     .navbar {
@@ -103,8 +104,8 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(to bottom, rgba(0,0,0,.28), rgba(0,0,0,.42)),
-        rgba(255,255,255,.08);
+        linear-gradient(to bottom, rgba(0, 0, 0, .28), rgba(0, 0, 0, .42)),
+        rgba(255, 255, 255, .08);
       z-index: 2;
     }
 
@@ -132,8 +133,8 @@
     .hero-subtitle {
       display: inline-block;
       padding: 8px 18px;
-      border: 1px solid rgba(255,255,255,.55);
-      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255, 255, 255, .55);
+      background: rgba(255, 255, 255, .12);
       backdrop-filter: blur(8px);
       border-radius: 50px;
       font-size: 14px;
@@ -147,7 +148,7 @@
       line-height: 1.08;
       text-transform: uppercase;
       margin-bottom: 22px;
-      text-shadow: 0 7px 25px rgba(0,0,0,.45);
+      text-shadow: 0 7px 25px rgba(0, 0, 0, .45);
     }
 
     .hero-title span {
@@ -158,7 +159,7 @@
       font-size: 19px;
       line-height: 1.7;
       max-width: 650px;
-      color: rgba(255,255,255,.92);
+      color: rgba(255, 255, 255, .92);
       margin-bottom: 32px;
     }
 
@@ -185,7 +186,7 @@
     }
 
     .btn-outline-custom {
-      border: 1px solid rgba(255,255,255,.75);
+      border: 1px solid rgba(255, 255, 255, .75);
       color: #fff;
       padding: 15px 28px;
       border-radius: 50px;
@@ -226,11 +227,19 @@
     }
 
     .navbar-toggler {
-        color: #fff;
+      color: #fff;
     }
+
     @keyframes scrollAnim {
-      0% { top: 8px; opacity: 1; }
-      100% { top: 24px; opacity: 0; }
+      0% {
+        top: 8px;
+        opacity: 1;
+      }
+
+      100% {
+        top: 24px;
+        opacity: 0;
+      }
     }
 
     @media(max-width: 991px) {
@@ -243,12 +252,12 @@
         padding: 14px 0;
       }
 
-    .navbar-collapse {
+      .navbar-collapse {
         background: rgb(0 0 0 / 36%);
         padding: 20px;
         margin-top: 12px;
         border-radius: 18px;
-    }
+      }
 
       .hero-title {
         font-size: 42px;
@@ -281,1017 +290,1011 @@
         justify-content: center;
       }
     }
-/* COUNTER */
-
-.counter-section {
-  position: relative;
-  margin-top: -65px;
-  z-index: 10;
-  padding-bottom: 70px;
-}
-
-.counter-box {
-  background: rgba(255,255,255,0.94);
-  backdrop-filter: blur(14px);
-  border-radius: 20px;
-  padding: 28px 18px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
-  transition: .35s;
-  height: 100%;
-}
-
-.counter-box:hover {
-  transform: translateY(-5px);
-}
-
-.counter-icon {
-  width: 58px;
-  height: 58px;
-  margin: auto;
-  margin-bottom: 14px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #c9ac57, #8e7332);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.counter-icon i {
-  color: #fff;
-  font-size: 20px;
-}
-
-.counter-box h2 {
-  font-size: 32px;
-  font-weight: 900;
-  color: #111;
-  margin-bottom: 6px;
-  line-height: 1;
-}
-
-.counter-box p {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-  font-weight: 600;
-  letter-spacing: .3px;
-}
-
-@media(max-width:991px){
-
-  .counter-section{
-    margin-top: -30px;
-  }
-
-  .counter-box{
-    padding: 24px 14px;
-  }
-
-  .counter-box h2{
-    font-size: 28px;
-  }
-
-}
-/* SERVICES */
-
-.services-section{
-  position: relative;
-  padding: 120px 0;
-  background: #f7f7f7;
-}
-
-.section-title{
-  margin-bottom: 70px;
-}
-
-.section-title span{
-  display: inline-block;
-  padding: 8px 18px;
-  border-radius: 50px;
-  background: rgba(201,172,87,.12);
-  color: #b69745;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 18px;
-}
-
-.section-title h2{
-  font-size: 52px;
-  font-weight: 900;
-  color: #111;
-  margin-bottom: 18px;
-}
-
-.section-title p{
-  max-width: 760px;
-  margin: auto;
-  color: #666;
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-.service-card{
-  position: relative;
-  background: #fff;
-  border-radius: 28px;
-  padding: 45px 38px;
-  overflow: hidden;
-  transition: .45s;
-  height: 100%;
-  box-shadow: 0 12px 40px rgba(0,0,0,.05);
-}
-
-.service-card::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 4px;
-  background: linear-gradient(90deg,#c9ac57,#8d7232);
-  transition: .4s;
-}
-
-.service-card:hover::before{
-  width: 100%;
-}
-
-.service-card:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(0,0,0,.12);
-}
-
-.service-icon{
-  width: 78px;
-  height: 78px;
-  border-radius: 22px;
-  background: linear-gradient(135deg,#c9ac57,#8d7232);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 28px;
-}
-
-.service-icon i{
-  color: #fff;
-  font-size: 30px;
-}
-
-.service-card h3{
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 18px;
-  color: #111;
-}
-
-.service-card p{
-  color: #666;
-  line-height: 1.9;
-  margin-bottom: 28px;
-  font-size: 16px;
-}
-
-.service-card a{
-  text-decoration: none;
-  color: #b69745;
-  font-weight: 700;
-  font-size: 15px;
-  transition: .3s;
-}
-
-.service-card a i{
-  margin-left: 8px;
-  transition: .3s;
-}
-
-.service-card:hover a i{
-  transform: translateX(6px);
-}
-
-@media(max-width:991px){
-
-  .services-section{
-    padding: 90px 0;
-  }
-
-  .section-title h2{
-    font-size: 38px;
-  }
-
-  .service-card{
-    padding: 35px 28px;
-  }
-
-}
-/* FOOTER */
-
-.footer-section {
-  position: relative;
-  background: #111;
-  color: #fff;
-  overflow: hidden;
-}
-
-.footer-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(rgba(17,17,17,.94), rgba(17,17,17,.98)),
-    url("assets/img/footer-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-}
-
-.footer-top,
-.footer-bottom {
-  position: relative;
-  z-index: 2;
-}
-
-.footer-top {
-  padding: 90px 0 40px;
-}
-
-.footer-widget h4 {
-  font-size: 22px;
-  font-weight: 800;
-  margin-bottom: 28px;
-  color: #fff;
-  position: relative;
-}
-
-.footer-widget h4::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 42px;
-  height: 3px;
-  background: linear-gradient(90deg, #c9ac57, #8d7232);
-  border-radius: 20px;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  color: #fff;
-  margin-bottom: 24px;
-}
-
-.footer-logo img {
-  width: 62px;
-  height: 62px;
-  object-fit: contain;
-}
-
-.footer-logo span {
-  font-size: 17px;
-  font-weight: 900;
-  letter-spacing: 3px;
-  color: #fff;
-}
-
-.footer-desc {
-  color: rgba(255,255,255,.72);
-  line-height: 1.9;
-  font-size: 15px;
-  max-width: 390px;
-  margin-bottom: 26px;
-}
-
-.footer-social {
-  display: flex;
-  gap: 12px;
-}
-
-.footer-social a {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.08);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: .35s;
-}
-
-.footer-social a:hover {
-  background: linear-gradient(135deg,#c9ac57,#8d7232);
-  transform: translateY(-4px);
-}
-
-.footer-links,
-.footer-contact {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin-bottom: 13px;
-}
-
-.footer-links a {
-  color: rgba(255,255,255,.72);
-  text-decoration: none;
-  font-size: 15px;
-  transition: .3s;
-}
-
-.footer-links a:hover {
-  color: #c9ac57;
-  padding-left: 6px;
-}
-
-.footer-contact li {
-  display: flex;
-  align-items: flex-start;
-  gap: 13px;
-  margin-bottom: 16px;
-  color: rgba(255,255,255,.72);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.footer-contact i {
-  color: #c9ac57;
-  font-size: 17px;
-  margin-top: 4px;
-  min-width: 18px;
-}
-
-.footer-contact a {
-  color: rgba(255,255,255,.72);
-  text-decoration: none;
-  transition: .3s;
-}
-
-.footer-contact a:hover {
-  color: #c9ac57;
-}
-
-.footer-cta {
-  margin-top: 65px;
-  padding: 34px 40px;
-  border-radius: 28px;
-  background: linear-gradient(135deg, rgba(201,172,87,.18), rgba(255,255,255,.06));
-  border: 1px solid rgba(255,255,255,.12);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.footer-cta h3 {
-  font-size: 28px;
-  font-weight: 900;
-  margin-bottom: 8px;
-}
-
-.footer-cta p {
-  margin: 0;
-  color: rgba(255,255,255,.68);
-}
-
-.footer-cta a {
-  flex-shrink: 0;
-  background: linear-gradient(135deg,#c9ac57,#8d7232);
-  color: #111;
-  text-decoration: none;
-  padding: 15px 28px;
-  border-radius: 50px;
-  font-weight: 900;
-  transition: .35s;
-}
-
-.footer-cta a:hover {
-  background: #fff;
-  transform: translateY(-3px);
-}
-
-.footer-cta a i {
-  margin-right: 8px;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.09);
-  padding: 22px 0;
-}
-
-.footer-bottom-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-.footer-bottom p {
-  margin: 0;
-  color: rgba(255,255,255,.62);
-  font-size: 14px;
-}
-
-.footer-bottom a {
-  color: rgba(255,255,255,.62);
-  text-decoration: none;
-  margin-left: 18px;
-  font-size: 14px;
-  transition: .3s;
-}
-
-.footer-bottom a:hover {
-  color: #c9ac57;
-}
-
-@media(max-width:991px) {
-  .footer-top {
-    padding: 70px 0 35px;
-  }
-
-  .footer-cta {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 28px;
-  }
-
-  .footer-bottom-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-bottom a {
-    margin: 0 8px;
-  }
-}
-
-@media(max-width:576px) {
-  .footer-logo span {
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-
-  .footer-cta h3 {
-    font-size: 22px;
-  }
-}
+
+    /* COUNTER */
+
+    .counter-section {
+      position: relative;
+      margin-top: -65px;
+      z-index: 10;
+      padding-bottom: 70px;
+    }
+
+    .counter-box {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      border-radius: 20px;
+      padding: 28px 18px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+      transition: .35s;
+      height: 100%;
+    }
+
+    .counter-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .counter-icon {
+      width: 58px;
+      height: 58px;
+      margin: auto;
+      margin-bottom: 14px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c9ac57, #8e7332);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .counter-icon i {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .counter-box h2 {
+      font-size: 32px;
+      font-weight: 900;
+      color: #111;
+      margin-bottom: 6px;
+      line-height: 1;
+    }
+
+    .counter-box p {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: .3px;
+    }
+
+    @media(max-width:991px) {
+
+      .counter-section {
+        margin-top: -30px;
+      }
+
+      .counter-box {
+        padding: 24px 14px;
+      }
+
+      .counter-box h2 {
+        font-size: 28px;
+      }
+
+    }
+
+    /* SERVICES */
+
+    .services-section {
+      position: relative;
+      padding: 120px 0;
+      background: #f7f7f7;
+    }
+
+    .section-title {
+      margin-bottom: 70px;
+    }
+
+    .section-title span {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 50px;
+      background: rgba(201, 172, 87, .12);
+      color: #b69745;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .section-title h2 {
+      font-size: 52px;
+      font-weight: 900;
+      color: #111;
+      margin-bottom: 18px;
+    }
+
+    .section-title p {
+      max-width: 760px;
+      margin: auto;
+      color: #666;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .service-card {
+      position: relative;
+      background: #fff;
+      border-radius: 28px;
+      padding: 45px 38px;
+      overflow: hidden;
+      transition: .45s;
+      height: 100%;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, .05);
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, #c9ac57, #8d7232);
+      transition: .4s;
+    }
+
+    .service-card:hover::before {
+      width: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .12);
+    }
+
+    .service-icon {
+      width: 78px;
+      height: 78px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #c9ac57, #8d7232);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .service-icon i {
+      color: #fff;
+      font-size: 30px;
+    }
+
+    .service-card h3 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      color: #111;
+    }
+
+    .service-card p {
+      color: #666;
+      line-height: 1.9;
+      margin-bottom: 28px;
+      font-size: 16px;
+    }
+
+    .service-card a {
+      text-decoration: none;
+      color: #b69745;
+      font-weight: 700;
+      font-size: 15px;
+      transition: .3s;
+    }
+
+    .service-card a i {
+      margin-left: 8px;
+      transition: .3s;
+    }
+
+    .service-card:hover a i {
+      transform: translateX(6px);
+    }
+
+    @media(max-width:991px) {
+
+      .services-section {
+        padding: 90px 0;
+      }
+
+      .section-title h2 {
+        font-size: 38px;
+      }
+
+      .service-card {
+        padding: 35px 28px;
+      }
+
+    }
+
+    /* FOOTER */
+
+    .footer-section {
+      position: relative;
+      background: #111;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .footer-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(17, 17, 17, .94), rgba(17, 17, 17, .98)),
+        url("assets/img/footer-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+
+    .footer-top,
+    .footer-bottom {
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-top {
+      padding: 90px 0 40px;
+    }
+
+    .footer-widget h4 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 28px;
+      color: #fff;
+      position: relative;
+    }
+
+    .footer-widget h4::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 42px;
+      height: 3px;
+      background: linear-gradient(90deg, #c9ac57, #8d7232);
+      border-radius: 20px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    .footer-logo img {
+      width: 62px;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .footer-logo span {
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #fff;
+    }
+
+    .footer-desc {
+      color: rgba(255, 255, 255, .72);
+      line-height: 1.9;
+      font-size: 15px;
+      max-width: 390px;
+      margin-bottom: 26px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .08);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: .35s;
+    }
+
+    .footer-social a:hover {
+      background: linear-gradient(135deg, #c9ac57, #8d7232);
+      transform: translateY(-4px);
+    }
+
+    .footer-links,
+    .footer-contact {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 13px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, .72);
+      text-decoration: none;
+      font-size: 15px;
+      transition: .3s;
+    }
+
+    .footer-links a:hover {
+      color: #c9ac57;
+      padding-left: 6px;
+    }
+
+    .footer-contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      margin-bottom: 16px;
+      color: rgba(255, 255, 255, .72);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .footer-contact i {
+      color: #c9ac57;
+      font-size: 17px;
+      margin-top: 4px;
+      min-width: 18px;
+    }
+
+    .footer-contact a {
+      color: rgba(255, 255, 255, .72);
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .footer-contact a:hover {
+      color: #c9ac57;
+    }
+
+    .footer-cta {
+      margin-top: 65px;
+      padding: 34px 40px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(201, 172, 87, .18), rgba(255, 255, 255, .06));
+      border: 1px solid rgba(255, 255, 255, .12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-cta h3 {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .footer-cta p {
+      margin: 0;
+      color: rgba(255, 255, 255, .68);
+    }
+
+    .footer-cta a {
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #c9ac57, #8d7232);
+      color: #111;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 50px;
+      font-weight: 900;
+      transition: .35s;
+    }
+
+    .footer-cta a:hover {
+      background: #fff;
+      transform: translateY(-3px);
+    }
+
+    .footer-cta a i {
+      margin-right: 8px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .09);
+      padding: 22px 0;
+    }
+
+    .footer-bottom-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      color: rgba(255, 255, 255, .62);
+      font-size: 14px;
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, .62);
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .footer-bottom a:hover {
+      color: #c9ac57;
+    }
+
+    @media(max-width:991px) {
+      .footer-top {
+        padding: 70px 0 35px;
+      }
+
+      .footer-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px;
+      }
+
+      .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-bottom a {
+        margin: 0 8px;
+      }
+    }
+
+    @media(max-width:576px) {
+      .footer-logo span {
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+
+      .footer-cta h3 {
+        font-size: 22px;
+      }
+    }
   </style>
 </head>
 
 <body>
-
-<header class="main-header">
-  <nav class="navbar navbar-expand-lg">
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a href="#" class="logo-area">
+          <img style="width: 150px;" src="logo.png" class="logo-icon" alt="Lojistik Logo">
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <i class="fa-solid fa-bars fs-2"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="mainMenu">
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#">Ana Sayfa</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Kurumsal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Hizmetlerimiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Kariyer</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Galeri</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
+            <li class="nav-item d-flex align-items-center ms-lg-2">
+              <img src="https://flagcdn.com/w40/tr.png" class="flag" alt="TR">
+              <img src="https://flagcdn.com/w40/gb.png" class="flag" alt="EN">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="hero-section">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="banner.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div id="particles-js"></div>
+    <div class="container hero-content">
+      <div class="hero-box">
+        <div class="hero-subtitle">ULUSAL VE ULUSLARARASI TAŞIMACILIK</div>
+        <h1 class="hero-title">
+          Güvenilir <span>Lojistik</span><br>
+          Çözümleri
+        </h1>
+        <p class="hero-desc">
+          Karayolu, denizyolu ve proje taşımacılığında profesyonel çözümler sunuyor;
+          yüklerinizi zamanında, güvenli ve planlı şekilde teslim ediyoruz.
+        </p>
+        <div class="hero-buttons">
+          <a href="tel:+905000000000" class="btn-gold">
+            <i class="fa-solid fa-phone me-2"></i> Hemen Ara
+          </a>
+          <a href="#iletisim" class="btn-outline-custom">
+            <i class="fa-solid fa-paper-plane me-2"></i> Teklif Al
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-icon"></div>
+  </section>
+  <!-- COUNTER SECTION -->
+  <section class="counter-section">
     <div class="container">
-      <a href="#" class="logo-area">
-        <img style="width: 150px;" src="logo.png" class="logo-icon" alt="Lojistik Logo">
-      </a>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="counter-box">
+            <div class="counter-icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h2>
+              <span class="counter" data-count="1250">0</span>+
+            </h2>
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
-        <i class="fa-solid fa-bars fs-2"></i>
-      </button>
+            <p>Mutlu Müşteri</p>
+          </div>
+        </div>
 
-      <div class="collapse navbar-collapse justify-content-end" id="mainMenu">
-        <ul class="navbar-nav align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#">Ana Sayfa</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Kurumsal</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Hizmetlerimiz</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Kariyer</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Galeri</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
-          <li class="nav-item d-flex align-items-center ms-lg-2">
-            <img src="https://flagcdn.com/w40/tr.png" class="flag" alt="TR">
-            <img src="https://flagcdn.com/w40/gb.png" class="flag" alt="EN">
-          </li>
-        </ul>
+        <div class="col-lg-3 col-md-6">
+          <div class="counter-box">
+            <div class="counter-icon">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+
+            <h2>
+              <span class="counter" data-count="5800">0</span>+
+            </h2>
+
+            <p>Tamamlanan Taşıma</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="counter-box">
+            <div class="counter-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <h2>
+              <span class="counter" data-count="81">0</span>
+            </h2>
+
+            <p>Hizmet Verilen Şehir</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="counter-box">
+            <div class="counter-icon">
+              <i class="fa-solid fa-box"></i>
+            </div>
+
+            <h2>
+              <span class="counter" data-count="24000">0</span>+
+            </h2>
+
+            <p>Taşınan Yük</p>
+          </div>
+        </div>
+
       </div>
     </div>
-  </nav>
-</header>
+  </section>
+  <!-- LOGISTIC SERVICES -->
 
-<section class="hero-section">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="banner.mp4" type="video/mp4">
-  </video>
+  <section class="services-section">
 
-  <div class="hero-overlay"></div>
-  <div id="particles-js"></div>
-
-  <div class="container hero-content">
-    <div class="hero-box">
-      <div class="hero-subtitle">ULUSAL VE ULUSLARARASI TAŞIMACILIK</div>
-      <h1 class="hero-title">
-        Güvenilir <span>Lojistik</span><br>
-        Çözümleri
-      </h1>
-      <p class="hero-desc">
-        Karayolu, denizyolu ve proje taşımacılığında profesyonel çözümler sunuyor;
-        yüklerinizi zamanında, güvenli ve planlı şekilde teslim ediyoruz.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="tel:+905000000000" class="btn-gold">
-          <i class="fa-solid fa-phone me-2"></i> Hemen Ara
-        </a>
-        <a href="#iletisim" class="btn-outline-custom">
-          <i class="fa-solid fa-paper-plane me-2"></i> Teklif Al
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="scroll-icon"></div>
-</section>
-<!-- COUNTER SECTION -->
-<section class="counter-section">
-  <div class="container">
-    <div class="row g-4">
-
-      <div class="col-lg-3 col-md-6">
-        <div class="counter-box">
-          <div class="counter-icon">
-            <i class="fa-solid fa-users"></i>
-          </div>
-
-          <h2>
-            <span class="counter" data-count="1250">0</span>+
-          </h2>
-
-          <p>Mutlu Müşteri</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6">
-        <div class="counter-box">
-          <div class="counter-icon">
-            <i class="fa-solid fa-truck-fast"></i>
-          </div>
-
-          <h2>
-            <span class="counter" data-count="5800">0</span>+
-          </h2>
-
-          <p>Tamamlanan Taşıma</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6">
-        <div class="counter-box">
-          <div class="counter-icon">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-
-          <h2>
-            <span class="counter" data-count="81">0</span>
-          </h2>
-
-          <p>Hizmet Verilen Şehir</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6">
-        <div class="counter-box">
-          <div class="counter-icon">
-            <i class="fa-solid fa-box"></i>
-          </div>
-
-          <h2>
-            <span class="counter" data-count="24000">0</span>+
-          </h2>
-
-          <p>Taşınan Yük</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- LOGISTIC SERVICES -->
-
-<section class="services-section">
-
-  <div class="container">
-
-    <div class="section-title text-center">
-      <span>PROFESYONEL HİZMETLER</span>
-      <h2>Lojistik Çözümlerimiz</h2>
-      <p>
-        Ulusal ve uluslararası taşımacılık süreçlerinde
-        hızlı, güvenilir ve profesyonel lojistik hizmetleri sunuyoruz.
-      </p>
-    </div>
-
-    <div class="row g-4">
-
-      <!-- CARD -->
-
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-
-          <div class="service-icon">
-            <i class="fa-solid fa-truck-fast"></i>
-          </div>
-
-          <h3>Karayolu Taşımacılığı</h3>
-
-          <p>
-            Türkiye geneli güvenli ve zamanında
-            teslimat odaklı taşımacılık çözümleri.
-          </p>
-
-          <a href="#">
-            Detaylı İncele
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- CARD -->
-
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-
-          <div class="service-icon">
-            <i class="fa-solid fa-ship"></i>
-          </div>
-
-          <h3>Denizyolu Lojistiği</h3>
-
-          <p>
-            Liman operasyonları ve konteyner
-            taşımacılığında profesyonel süreç yönetimi.
-          </p>
-
-          <a href="#">
-            Detaylı İncele
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- CARD -->
-
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-
-          <div class="service-icon">
-            <i class="fa-solid fa-box"></i>
-          </div>
-
-          <h3>Depolama Hizmeti</h3>
-
-          <p>
-            Güvenli depo alanlarımız ile
-            yüklerinizi kontrollü şekilde saklıyoruz.
-          </p>
-
-          <a href="#">
-            Detaylı İncele
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- CARD -->
-
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-
-          <div class="service-icon">
-            <i class="fa-solid fa-plane-departure"></i>
-          </div>
-
-          <h3>Hava Kargo</h3>
-
-          <p>
-            Acil gönderileriniz için hızlı
-            ve güvenilir hava taşımacılığı çözümleri.
-          </p>
-
-          <a href="#">
-            Detaylı İncele
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- CARD -->
-
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-
-          <div class="service-icon">
-            <i class="fa-solid fa-warehouse"></i>
-          </div>
-
-          <h3>Antrepo Hizmeti</h3>
-
-          <p>
-            Modern antrepo çözümleri ile
-            güvenli stok ve ürün yönetimi sağlıyoruz.
-          </p>
-
-          <a href="#">
-            Detaylı İncele
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-
-        </div>
-      </div>
-
-      <!-- CARD -->
-
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card">
-
-          <div class="service-icon">
-            <i class="fa-solid fa-route"></i>
-          </div>
-
-          <h3>Proje Taşımacılığı</h3>
-
-          <p>
-            Ağır yük ve özel proje operasyonlarında
-            profesyonel lojistik planlama sunuyoruz.
-          </p>
-
-          <a href="#">
-            Detaylı İncele
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-<!-- FOOTER -->
-
-<footer class="footer-section">
-
-  <div class="footer-top">
     <div class="container">
 
-      <div class="row g-5">
+      <div class="section-title text-center">
+        <span>PROFESYONEL HİZMETLER</span>
+        <h2>Lojistik Çözümlerimiz</h2>
+        <p>
+          Ulusal ve uluslararası taşımacılık süreçlerinde
+          hızlı, güvenilir ve profesyonel lojistik hizmetleri sunuyoruz.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- CARD -->
 
         <div class="col-lg-4 col-md-6">
-          <div class="footer-widget">
-            <a href="#" class="footer-logo">
-              <img src="logo.png" alt="Çağlar Lojistik Logo">
-              <span>ÇAĞLAR LOJİSTİK</span>
-            </a>
+          <div class="service-card">
 
-            <p class="footer-desc">
-              Karayolu, denizyolu, depolama ve proje taşımacılığı alanlarında
-              güvenilir, hızlı ve profesyonel lojistik çözümleri sunuyoruz.
+            <div class="service-icon">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+
+            <h3>Karayolu Taşımacılığı</h3>
+
+            <p>
+              Türkiye geneli güvenli ve zamanında
+              teslimat odaklı taşımacılık çözümleri.
             </p>
 
-            <div class="footer-social">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#">
+              Detaylı İncele
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-ship"></i>
+            </div>
+
+            <h3>Denizyolu Lojistiği</h3>
+
+            <p>
+              Liman operasyonları ve konteyner
+              taşımacılığında profesyonel süreç yönetimi.
+            </p>
+
+            <a href="#">
+              Detaylı İncele
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-box"></i>
+            </div>
+
+            <h3>Depolama Hizmeti</h3>
+
+            <p>
+              Güvenli depo alanlarımız ile
+              yüklerinizi kontrollü şekilde saklıyoruz.
+            </p>
+
+            <a href="#">
+              Detaylı İncele
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-plane-departure"></i>
+            </div>
+
+            <h3>Hava Kargo</h3>
+
+            <p>
+              Acil gönderileriniz için hızlı
+              ve güvenilir hava taşımacılığı çözümleri.
+            </p>
+
+            <a href="#">
+              Detaylı İncele
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-warehouse"></i>
+            </div>
+
+            <h3>Antrepo Hizmeti</h3>
+
+            <p>
+              Modern antrepo çözümleri ile
+              güvenli stok ve ürün yönetimi sağlıyoruz.
+            </p>
+
+            <a href="#">
+              Detaylı İncele
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-route"></i>
+            </div>
+
+            <h3>Proje Taşımacılığı</h3>
+
+            <p>
+              Ağır yük ve özel proje operasyonlarında
+              profesyonel lojistik planlama sunuyoruz.
+            </p>
+
+            <a href="#">
+              Detaylı İncele
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- FOOTER -->
+
+  <footer class="footer-section">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget">
+              <a href="#" class="footer-logo">
+                <img src="logo.png" alt="Çağlar Lojistik Logo">
+                <span>ÇAĞLAR LOJİSTİK</span>
+              </a>
+
+              <p class="footer-desc">
+                Karayolu, denizyolu, depolama ve proje taşımacılığı alanlarında
+                güvenilir, hızlı ve profesyonel lojistik çözümleri sunuyoruz.
+              </p>
+
+              <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-2 col-md-6">
-          <div class="footer-widget">
-            <h4>Kurumsal</h4>
+          <div class="col-lg-2 col-md-6">
+            <div class="footer-widget">
+              <h4>Kurumsal</h4>
 
-            <ul class="footer-links">
-              <li><a href="#">Ana Sayfa</a></li>
-              <li><a href="#">Hakkımızda</a></li>
-              <li><a href="#">Hizmetlerimiz</a></li>
-              <li><a href="#">Galeri</a></li>
-              <li><a href="#">Kariyer</a></li>
-              <li><a href="#">İletişim</a></li>
-            </ul>
+              <ul class="footer-links">
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">Hizmetlerimiz</a></li>
+                <li><a href="#">Galeri</a></li>
+                <li><a href="#">Kariyer</a></li>
+                <li><a href="#">İletişim</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-widget">
-            <h4>Hizmetlerimiz</h4>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>Hizmetlerimiz</h4>
 
-            <ul class="footer-links">
-              <li><a href="#">Karayolu Taşımacılığı</a></li>
-              <li><a href="#">Denizyolu Lojistiği</a></li>
-              <li><a href="#">Hava Kargo</a></li>
-              <li><a href="#">Depolama Hizmeti</a></li>
-              <li><a href="#">Antrepo Hizmeti</a></li>
-              <li><a href="#">Proje Taşımacılığı</a></li>
-            </ul>
+              <ul class="footer-links">
+                <li><a href="#">Karayolu Taşımacılığı</a></li>
+                <li><a href="#">Denizyolu Lojistiği</a></li>
+                <li><a href="#">Hava Kargo</a></li>
+                <li><a href="#">Depolama Hizmeti</a></li>
+                <li><a href="#">Antrepo Hizmeti</a></li>
+                <li><a href="#">Proje Taşımacılığı</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-widget">
-            <h4>İletişim</h4>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <h4>İletişim</h4>
 
-            <ul class="footer-contact">
-              <li>
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Ankara / Türkiye</span>
-              </li>
+              <ul class="footer-contact">
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Ankara / Türkiye</span>
+                </li>
 
-              <li>
-                <i class="fa-solid fa-phone"></i>
-                <a href="tel:+905000000000">+90 500 000 00 00</a>
-              </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <a href="tel:+905000000000">+90 500 000 00 00</a>
+                </li>
 
-              <li>
-                <i class="fa-brands fa-whatsapp"></i>
-                <a href="https://wa.me/905000000000" target="_blank">WhatsApp ile İletişim</a>
-              </li>
+                <li>
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <a href="https://wa.me/905000000000" target="_blank">WhatsApp ile İletişim</a>
+                </li>
 
-              <li>
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:info@caglarlojistik.com">info@caglarlojistik.com</a>
-              </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i>
+                  <a href="mailto:info@caglarlojistik.com">info@caglarlojistik.com</a>
+                </li>
 
-              <li>
-                <i class="fa-solid fa-clock"></i>
-                <span>Hafta içi: 09:00 - 18:00</span>
-              </li>
-            </ul>
+                <li>
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Hafta içi: 09:00 - 18:00</span>
+                </li>
+              </ul>
+            </div>
           </div>
+
         </div>
 
-      </div>
+        <div class="footer-cta">
+          <div>
+            <h3>Lojistik ihtiyaçlarınız için hızlı teklif alın.</h3>
+            <p>Yükünüzü güvenle taşımak için profesyonel ekibimizle iletişime geçin.</p>
+          </div>
 
-      <div class="footer-cta">
-        <div>
-          <h3>Lojistik ihtiyaçlarınız için hızlı teklif alın.</h3>
-          <p>Yükünüzü güvenle taşımak için profesyonel ekibimizle iletişime geçin.</p>
+          <a href="tel:+905000000000">
+            <i class="fa-solid fa-phone"></i>
+            Hemen Ara
+          </a>
         </div>
 
-        <a href="tel:+905000000000">
-          <i class="fa-solid fa-phone"></i>
-          Hemen Ara
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="footer-bottom-content">
-        <p>© 2026 Çağlar Lojistik. Tüm hakları saklıdır.</p>
-
-        <div>
-          <a href="#">KVKK</a>
-          <a href="#">Gizlilik Politikası</a>
-          <a href="#">Çerez Politikası</a>
-        </div>
       </div>
     </div>
-  </div>
 
-</footer>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <p>© 2026 Çağlar Lojistik. Tüm hakları saklıdır.</p>
 
-<script>
-  particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 90,
-        "density": {
-          "enable": true,
-          "value_area": 1000
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle"
-      },
-      "opacity": {
-        "value": 0.55,
-        "random": true
-      },
-      "size": {
-        "value": 3,
-        "random": true
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.35,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 1.4,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out"
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 170,
-          "line_linked": {
-            "opacity": 0.7
+          <div>
+            <a href="#">KVKK</a>
+            <a href="#">Gizlilik Politikası</a>
+            <a href="#">Çerez Politikası</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 90,
+          "density": {
+            "enable": true,
+            "value_area": 1000
           }
         },
-        "push": {
-          "particles_nb": 4
-        }
-      }
-    },
-    "retina_detect": true
-  });
-
-  $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 70) {
-      $(".main-header").css({
-        "background": "rgba(0,0,0)",
-        "box-shadow": "0 6px 25px rgba(0,0,0,.15)"
-      });
-    } else {
-      $(".main-header").css({
-      "background": "rgba(0,0,0)",
-        "box-shadow": "0 4px 20px rgba(0,0,0,.05)"
-      });
-    }
-  });
-</script>
-<script>
-
-let counted = false;
-
-$(window).scroll(function () {
-
-  let oTop = $('.counter-section').offset().top - window.innerHeight;
-
-  if (!counted && $(window).scrollTop() > oTop) {
-
-    $('.counter').each(function () {
-
-      let $this = $(this),
-          countTo = $this.attr('data-count');
-
-      $({
-        countNum: $this.text()
-      }).animate({
-          countNum: countTo
+        "color": {
+          "value": "#ffffff"
         },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.55,
+          "random": true
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.35,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.4,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 170,
+            "line_linked": {
+              "opacity": 0.7
+            }
+          },
+          "push": {
+            "particles_nb": 4
+          }
+        }
+      },
+      "retina_detect": true
+    });
 
-        {
-          duration: 2500,
-          easing: 'swing',
+    $(window).on("scroll", function () {
+      if ($(this).scrollTop() > 70) {
+        $(".main-header").css({
+          "background": "rgba(0,0,0)",
+          "box-shadow": "0 6px 25px rgba(0,0,0,.15)"
+        });
+      } else {
+        $(".main-header").css({
+          "background": "rgba(0,0,0)",
+          "box-shadow": "0 4px 20px rgba(0,0,0,.05)"
+        });
+      }
+    });
+  </script>
+  <script>
 
-          step: function () {
-            $this.text(Math.floor(this.countNum));
+    let counted = false;
+
+    $(window).scroll(function () {
+
+      let oTop = $('.counter-section').offset().top - window.innerHeight;
+
+      if (!counted && $(window).scrollTop() > oTop) {
+
+        $('.counter').each(function () {
+
+          let $this = $(this),
+            countTo = $this.attr('data-count');
+
+          $({
+            countNum: $this.text()
+          }).animate({
+            countNum: countTo
           },
 
-          complete: function () {
-            $this.text(this.countNum);
-          }
+            {
+              duration: 2500,
+              easing: 'swing',
+
+              step: function () {
+                $this.text(Math.floor(this.countNum));
+              },
+
+              complete: function () {
+                $this.text(this.countNum);
+              }
+
+            });
 
         });
 
+        counted = true;
+      }
+
     });
 
-    counted = true;
-  }
-
-});
-
-</script>
+  </script>
 </body>
+
 </html>
