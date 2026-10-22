@@ -1,0 +1,24 @@
+ÇAĞLAR LOJİSTİK — AYDINLIK FİLO BANNER GÜNCELLEMESİ
+
+Bu paket, gönderdiğiniz lojistikankaraa (2).zip içeriği temel alınarak hazırlanmıştır.
+
+YAPILANLAR
+- Ana sayfaya daha aydınlık mavi gökyüzü ve farklı boylarda nakliye araçları içeren yeni banner görseli eklendi.
+- Koyu banner filtresi kaldırıldı; koyu başlık ve altın vurgu oluşturuldu.
+- Banner altına 8 adet tıklanabilir hizmet kutusu eklendi.
+- Mevcut iletişim butonları, teklif formu, hizmet sayfaları ve SEO alanları korundu.
+- Masaüstü, tablet ve mobil için stiller ayrıldı.
+
+CPANEL KURULUM
+1. Önce mevcut sitenin yedeğini alın.
+2. ZIP içindeki dosyaları sitenizin kök klasörüne (çoğunlukla public_html) yükleyip ayıklayın.
+3. Dosyalar public_html/index.html ve public_html/assets/... yapısında olmalıdır;
+   iç içe ikinci bir klasöre atmayın.
+4. Tarayıcıda Ctrl+F5 ile sayfayı yenileyin; bir CDN varsa önbelleğini temizleyin.
+
+ÖNEMLİ DOSYALAR
+- index.html: yenilenmiş ana sayfa
+- ankara-lojistik-aydinlik.webp: yeni optimize banner görseli
+- assets/hero-light.v2.css: yalnızca ana sayfa bannerına uygulanan görünüm kuralları
+
+Not: Görsel, filo çeşitliliğini temsil eden temsili bir çalışmadır.
